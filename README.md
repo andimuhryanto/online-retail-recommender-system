@@ -104,6 +104,7 @@ def mostSimilar(iD, n):
         similarities.append((sim,i2))
     similarities.sort(reverse=True)
     return similarities[:n]
+```
 # Find Similar Products of a Specific Product
 Now we can test our recommendation system by calculating the Jaccard similarity values to 3 random products.
 ```
