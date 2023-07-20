@@ -90,21 +90,7 @@ def mostSimilar(iD, n):
     similarities.sort(reverse=True)
     return similarities[:n]
 ```
-def Jaccard(s1, s2):
-    numer = len(s1.intersection(s2))
-    denom = len(s1.union(s2))
-    return numer / denom
 
-def mostSimilar(iD, n):
-    similarities = []
-    users = userPerProduct[iD]
-    for i2 in userPerProduct:
-        if i2 == iD: continue
-        sim = Jaccard(users, userPerProduct[i2])
-        similarities.append((sim,i2))
-    similarities.sort(reverse=True)
-    return similarities[:n]
-```
 # Find Similar Products of a Specific Product
 Now we can test our recommendation system by calculating the Jaccard similarity values to 3 random products.
 ```
